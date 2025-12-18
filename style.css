@@ -1,0 +1,177 @@
+/* =========================
+   NAVBAR – ALINHAMENTO LIMPO
+   ========================= */
+
+/* =========================
+   NAVBAR – LOGO GRANDE CENTRAL
+   ========================= */
+
+body {
+    padding-top: 120px; /* compensa fixed-top */
+}
+
+.navbar {
+    min-height: 120px;
+    padding: 0;
+}
+
+.navbar .container {
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO CENTRALIZADA */
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 88px; /* logo grande */
+    width: auto;
+}
+
+/* MENU */
+.navbar-collapse {
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+    body {
+        padding-top: 140px;
+    }
+
+    .navbar {
+        min-height: auto;
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-brand {
+        position: static;
+        transform: none;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-logo {
+        height: 72px;
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+    }
+}
+
+/* =========================
+   SEÇÃO CRIADORES
+   ========================= */
+
+.criadores {
+    background: linear-gradient(180deg, #0f4c81 0%, #0b6b4f 100%);
+    padding: 90px 24px;
+}
+
+.criadores-header {
+    max-width: 900px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.criadores-header h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.4px;
+}
+
+/* =========================
+   CARD CHANFRADO
+   ========================= */
+
+.criador-card {
+    max-width: 1000px;
+    margin: 0 auto 48px;
+    padding: 40px 44px;
+
+    background: #ffffff;
+    border-left: 8px solid #1fa36b;
+    border-top: 4px solid #1f6fb2;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    position: relative;
+
+    clip-path: polygon(
+        16px 0,
+        calc(100% - 16px) 0,
+        100% 16px,
+        100% calc(100% - 16px),
+        calc(100% - 16px) 100%,
+        16px 100%,
+        0 calc(100% - 16px),
+        0 16px
+    );
+}
+
+.criador-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f2a44;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.criador-role {
+    display: block;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0b6b4f;
+    margin-bottom: 18px;
+    letter-spacing: 0.4px;
+}
+
+.criador-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #1f2937;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .criadores {
+        padding: 70px 16px;
+    }
+
+    .criadores-header h2 {
+        font-size: 2.1rem;
+    }
+
+    .criador-card {
+        padding: 28px 26px;
+        border-left-width: 6px;
+    }
+}
