@@ -1,65 +1,39 @@
-/* =========================
-   NAVBAR – ALINHAMENTO LIMPO
-   ========================= */
-
-/* =========================
-   NAVBAR – LOGO GRANDE CENTRAL
-   ========================= */
-
-body {
-    padding-top: 120px; /* compensa fixed-top */
-}
-
 .navbar {
-    min-height: 120px;
+    min-height: 96px;
     padding: 0;
 }
 
 .navbar .container {
-    position: relative;
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-}
-
-/* LOGO CENTRALIZADA */
-.navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 0;
+    min-height: 96px;
     display: flex;
     align-items: center;
 }
 
 .navbar-logo {
-    height: 88px; /* logo grande */
+    height: 56px;
     width: auto;
 }
 
-/* MENU */
-.navbar-collapse {
-    flex-grow: 1;
+.navbar-brand {
+    padding: 0;
+    margin-right: 1.5rem;
 }
 
 .navbar-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .nav-link {
+    padding: 0;
+    line-height: 96px;
     font-size: 1rem;
     font-weight: 500;
-    padding: 0.5rem 0;
 }
 
-/* MOBILE */
 @media (max-width: 991px) {
-    body {
-        padding-top: 140px;
+    .nav-link {
+        line-height: normal;
+        padding: 0.75rem 0;
     }
 
     .navbar {
@@ -67,29 +41,17 @@ body {
         padding: 0.75rem 1rem;
     }
 
-    .navbar-brand {
-        position: static;
-        transform: none;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
     .navbar-logo {
-        height: 72px;
-    }
-
-    .navbar-nav {
-        margin-left: 0;
+        height: 48px;
     }
 }
 
-/* =========================
-   SEÇÃO CRIADORES
-   ========================= */
-
 .criadores {
-    background: linear-gradient(180deg, #0f4c81 0%, #0b6b4f 100%);
+    background: linear-gradient(
+        180deg,
+        #0f4c81 0%,
+        #0b6b4f 100%
+    );
     padding: 90px 24px;
 }
 
@@ -106,10 +68,6 @@ body {
     letter-spacing: 0.4px;
 }
 
-/* =========================
-   CARD CHANFRADO
-   ========================= */
-
 .criador-card {
     max-width: 1000px;
     margin: 0 auto 48px;
@@ -123,14 +81,14 @@ body {
     position: relative;
 
     clip-path: polygon(
-        16px 0,
-        calc(100% - 16px) 0,
-        100% 16px,
-        100% calc(100% - 16px),
-        calc(100% - 16px) 100%,
-        16px 100%,
-        0 calc(100% - 16px),
-        0 16px
+        14px 0,
+        calc(100% - 14px) 0,
+        100% 14px,
+        100% calc(100% - 14px),
+        calc(100% - 14px) 100%,
+        14px 100%,
+        0 calc(100% - 14px),
+        0 14px
     );
 }
 
@@ -160,7 +118,6 @@ body {
     margin: 0;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .criadores {
         padding: 70px 16px;
@@ -175,3 +132,8 @@ body {
         border-left-width: 6px;
     }
 }
+.footer-visits img {
+    margin-top: 15px;
+    height: 30px;
+}
+
