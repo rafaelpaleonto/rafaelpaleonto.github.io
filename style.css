@@ -211,3 +211,88 @@
 .main-container {
     padding-top: calc(var(--navbar-height) + 14px);
 }
+
+
+/* =========================================================
+   CARD INSTITUCIONAL
+   ========================================================= */
+
+.card-institucional {
+    height: 100%;
+    background: #ffffff;
+
+    border-radius: 14px;
+    border-left: 6px solid #0b6b4f;
+    border-top: 4px solid #0f4c81;
+
+    padding: 32px 34px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-institucional:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+/* Título do card */
+.card-institucional h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0f2a44;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Links institucionais */
+.card-institucional h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-institucional h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Texto */
+.card-institucional p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #1f2937;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Variante institucional (ex.: NUPES) */
+.card-institucional--org {
+    border-left-color: #1fa36b;
+    border-top-color: #2563eb;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .card-institucional {
+        padding: 26px 24px;
+    }
+
+    .card-institucional h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.logo-institucional {
+    max-height: 90px;
+    width: auto;
+    transition: transform 0.25s ease;
+}
+
+.logo-institucional:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .logo-institucional {
+        max-height: 70px;
+    }
+}
