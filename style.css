@@ -1,10 +1,18 @@
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+:root {
+    --navbar-height: 96px;
+}
+
 .navbar {
-    min-height: 96px;
+    min-height: var(--navbar-height);
     padding: 0;
 }
 
 .navbar .container {
-    min-height: 96px;
+    min-height: var(--navbar-height);
     display: flex;
     align-items: center;
 }
@@ -25,11 +33,12 @@
 
 .nav-link {
     padding: 0;
-    line-height: 96px;
+    line-height: var(--navbar-height);
     font-size: 1rem;
     font-weight: 500;
 }
 
+/* Navbar mobile */
 @media (max-width: 991px) {
     .nav-link {
         line-height: normal;
@@ -46,12 +55,14 @@
     }
 }
 
+/* =========================================================
+   SEÇÃO CRIADORES
+   ========================================================= */
+
 .criadores {
-    background: linear-gradient(
-        180deg,
-        #0f4c81 0%,
-        #0b6b4f 100%
-    );
+    background: linear-gradient(180deg,
+            #0f4c81 0%,
+            #0b6b4f 100%);
     padding: 90px 24px;
 }
 
@@ -118,6 +129,7 @@
     margin: 0;
 }
 
+/* Criadores - mobile */
 @media (max-width: 768px) {
     .criadores {
         padding: 70px 16px;
@@ -132,8 +144,70 @@
         border-left-width: 6px;
     }
 }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 .footer-visits img {
     margin-top: 15px;
     height: 30px;
 }
 
+/* =========================================================
+   TEXTO DE APRESENTAÇÃO
+   ========================================================= */
+
+.texto-apresentacao {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+
+    font-family: "Inter", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333333;
+
+    text-align: justify;
+}
+
+.texto-apresentacao h1,
+.texto-apresentacao h2 {
+    font-weight: 600;
+    color: #1f2933;
+    margin-bottom: 1rem;
+}
+
+.texto-apresentacao p {
+    margin-bottom: 1.2rem;
+}
+
+.texto-apresentacao strong {
+    color: #111827;
+}
+
+.texto-apresentacao a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.texto-apresentacao a:hover {
+    text-decoration: underline;
+}
+
+/* Texto de apresentação - mobile */
+@media (max-width: 768px) {
+    .texto-apresentacao {
+        font-size: 1rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+.main-container {
+    padding-top: calc(var(--navbar-height) + 14px);
+}
