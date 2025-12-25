@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Dados Impopulares - Introdução ao R">
+    <meta name="keywords" content="R, programação, estatística, UFMT, SEPLAG, NUPES, FACULDADE DE ECONOMIA">
+    <meta name="author" content="Rafael Simões e Maria Alencar">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="estatistica_ufmt.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>Dados Impopulares - Curso de Introdução ao R</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar fixa -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#top">
+                <span class="fw-bold text-primary">Introdução ao R</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="r_course.html">Introdução ao R</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="conteudo">
+        <h1>Introdução ao R</h1>
+
+        <h2>O que é o R?</h2>
+
+        <p>
+            O <strong>R</strong> é uma linguagem de programação de alto nível, orientada a
+            objetos, voltada para a manipulação e análise de dados, além
+            da visualização gráfica. Seu ecossistema oferece tanto a
+            implementação de técnicas estatísticas próprias quanto o uso de
+            métodos já disponíveis em diversos pacotes desenvolvidos pela
+            comunidade
+        </p>
+
+        <h2>R Base</h2>
+
+        <p>
+            Sobre o R Base.
+        </p>
+        O R Base constitui o núcleo das funções da linguagem R, englobando
+        sua estrutura fundamental, os pacotes básicos e o registro de pacotes
+        adicionais desenvolvidos pela comunidade, sob a gestão do CRAN.
+        O Acesso do <a href="https://cran.r-project.org/">CRAN</a>.
+        </p>
+
+
+        <h2>Exemplo do R Base</h2>
+
+        <figure class="conteudo-imagem imagem-pequena">
+            <img src="img11.png" alt="RBase Interface">
+            <figcaption> <a href="https://cran.r-project.org/bin/windows/base/">Figura 1 – RBase </a></figcaption>
+        </figure>
+
+        <h2>IDE para uso do R</h2>
+
+
+        <figure class="conteudo-imagem imagem-pequena">
+            <img src="img12.png" alt="Rstudio Interface">
+            <figcaption> <a href="https://posit.co/download/rstudio-desktop/">Figura 2 – RStudio </a></figcaption>
+        </figure>
+
+        <h3>IDE: RStudio – Sobre a IDE</h3>
+
+        <ol class="lista-numerada">
+            <li>
+                <strong>Editor de Script (canto superior esquerdo)</strong>
+                Onde o código em R é escrito e salvo em arquivos <strong>.R</strong>. Permite organizar,
+                comentar e executar trechos de código.
+            </li>
+
+            <li>
+                <strong>Console (canto inferior esquerdo)</strong>
+                Funciona como linha de comando do R. Mostra a saída dos comandos executados
+                e também aceita comandos digitados diretamente.
+            </li>
+
+            <li>
+                <strong>Environment / History (canto superior direito)</strong> com o seguintes campos:
+            </li>
+
+        </ol>
+        <ul class="lista-simples">
+            <li>
+                <strong>Environment</strong>: Exibe as variáveis, data frames e outros objetos
+                atualmente carregados na sessão do R.
+            </li>
+
+            <li>
+                <strong>History</strong>: Registra todos os comandos digitados no console.
+            </li>
+
+            </ol>
+            <ul class="lista-simples">
+                <li>
+                    <strong>Environment</strong>: Exibe as variáveis, data frames e outros objetos
+                    atualmente carregados na sessão do R.
+                </li>
+                <li>
+                    <strong>Files</strong>: mostra os arquivos da pasta de trabalho.
+                </li>
+                <li>
+                    <strong>Plots</strong>: exibe gráficos gerados pelos comandos de visualização.
+                </li>
+                <li>
+                    <strong>Packages</strong>: gerencia pacotes instalados e carregados.
+                </li>
+                <li>
+                    <strong>Help</strong>: ornece documentação e exemplos de funções/pacotes.
+                </li>
+                <li>
+                    <strong>Viewer</strong>: exibe relatórios em HTML, dashboards e visualizações
+                    interativas.
+                </li>
+            </ul>
+
+
+
+            <h2>Tipos de dados em R</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Propriedades</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Texto</td>
+                        <td>Caracteres alfanuméricos</td>
+                        <td>Não permite operações matemáticas</td>
+                        <td>"Computador"</td>
+                    </tr>
+                    <tr>
+                        <td>Númerico</td>
+                        <td>Numeros reais</td>
+                        <td>Permite operações matemáticas</td>
+                        <td>12.9, 10</td>
+
+                    </tr>
+                    <tr>
+                        <td>Inteiro</td>
+                        <td>Numeros inteiros</td>
+                        <td>Permite operações matemáticas; sem decimais; Usar L</td>
+                        <td>12L, 10L</td>
+
+                    </tr>
+                    <tr>
+                        <td>Lógico</td>
+                        <td>Valores Booleanos</td>
+                        <td>Apenas <strong> TRUE</strong> <strong> FALSE</strong></td>
+                        <td>TRUE, FALSE
+                    </tr>
+                    >
+                </tbody>
+            </table>
+
+            <h3>Tipos de variáveis em R - Exemplo prático</h3>
+            <pre><code>
+a <- 2L #Tipo Inteiro
+b <- 3.14 #Tipo double ou numeric
+c <- "Economia" # Tipo String
+d <- "M" #tipo Fator
+# Exemplo com vetor de inteiros
+v1 <- c(10L,20L,30L,40L,50L,60L)
+print(v1)
+#Exemplo com um vetor de floats
+v2 <- c(5.45, 3.14, 2.71, 10.13)
+print(v2)
+#Exemplo com vetor de Strings
+v3 <- c("Branco","Preto","Pardo","Amarelo","Indígena","Não Declarado")
+print(v3)
+#Exemplo com vetor de factor
+v4 <- factor(c('M','M','F','M','F','F','F'))
+print(v4)
+
+            </code></pre>
+
+            <figure class="conteudo-imagem imagem-pequena">
+                <img src="img14.png" alt="Modificação do diretório de trabalho">
+                <figcaption> Figura 3 – Tipos de Variáveis </figcaption>
+            </figure>
+
+
+
+            <h2>Principais Objetos do R</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Objeto</th>
+                        <th>Descrição</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vetor</td>
+                        <td>Sequência unidimensional de variáveis do mesmo tipo</td>
+                        <td><i>c(1,2,3)</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Matriz</td>
+                        <td>Dados bidimensionais homogêneos</td>
+                        <td>
+                            <i>matrix(c(1,2,3,4), nrow = 2)</i>;
+                            <i>matrix(1:6, nrow = 2)</i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Array</td>
+                        <td>Estrutura multidimensional</td>
+                        <td><i>array(1:12, dim = c(3,2,2))</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dataframe</td>
+                        <td>
+                            Tabela com colunas de tipos de dados diferentes, ou uma coleção de vetores justapostos.
+                            Na coluna as variáveis são do mesmo tipo, as linhas, também chamadas de observação,
+                            podem ser de tipos diferentes.
+                        </td>
+                        <td><i>data.frame(nome, idade)</i></td>
+                    </tr>
+                    <tr>
+                        <td>Lista</td>
+                        <td>
+                            Coleção heterogênea de objetos. Uma linha de um dataframe é um exemplo de lista.
+                        </td>
+                        <td><i>list(nome = "Ana", idade = 25, notas = c(8,9,10))</i></td>
+                    </tr>
+                    <tr>
+                        <td>Fator</td>
+                        <td> Variável categórica (qualitativa)</td>
+                        <td><i>factor(c("M","F","F"))</i></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>Pontos Importantes</h1>
+            <div class="alerta-box alerta-erro">
+                <h3> <strong>Gerenciamento de diretório de trabalho no ambiente R é feito com as seguintes
+                        funções:</strong> </h3>
+                <ol class="lista-numerada">
+                    <li>
+                        <strong>getwd()</strong>: Retorna o diretório de trabalho atual do R.
+                    </li>
+                    <li>
+                        <strong>setwd()</strong>: Define um novo diretório de trabalho no R.
+                    </li>
+            </div>
+            <pre><code>
+#função getwd() - retorna o atual diretório de trabalho
+getwd()
+#função setwd() - Modifica o diretório de trabalho - Forma 1
+setwd("C:\\Users\\orafa\\OneDrive\\Documents\\dados impopulares\\novo_site\\introducao-ao-r.github.io\\introducao_ao_r") 
+#função setwd() - Modifica o diretório de trabalho - Forma 2
+setwd("C:/Users/orafa/OneDrive/Documents/dados impopulares/novo_site/introducao-ao-r.github.io/introducao_ao_r")
+
+            </code></pre>
+
+
+            <figure class="conteudo-imagem imagem-pequena">
+                <img src="img13.png" alt="Modificação do diretório de trabalho">
+                <figcaption> Figura 4 – Modificação do diretório de trabalho </figcaption>
+            </figure>
+
+
+
+    </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="contato" class="mt-5">
+        <div class="footer-content text-center py-4">
+            <div class="footer-logos mb-2">
+                <img src="logo_dados_impopulares.png" alt="UFMT" class="logo-ufmt" width="200">
+            </div>
+
+            <div class="footer-text">
+                © 2025 - Dados Impopulares | Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
