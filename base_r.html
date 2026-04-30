@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de Introdução ao R - NUPES/FACECO/UFMT. Uma semana de introdução à programação em R para estudantes e profissionais.">
+    <meta name="keywords" content="R, programação, estatística, UFMT, NUPES, FACECO, curso, introdução, dados">
+    <meta name="author" content="Núcleo de Pesquisas Econômicas e Socioeconômicas - NUPES">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="estatistica_ufmt.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <title>Curso de Introdução ao R - NUPES/FACECO/UFMT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#top">
+                <img src="logo_r1.png" alt="Logo NUPES" width="40" class="me-2">
+                <span class="fw-bold text-primary">Curso sobre R - NUPES</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#top">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ufmt.br/unidade/nupes">Conheça o NUPES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conteudo.html">Conteúdo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header id="top" class="text-center mt-5 pt-5">
+        <h1>Introdução ao R</h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main-container">
+        <div class="content container mt-5" id="sobre">
+            <div class="row">
+                <!-- Coluna 1 -->
+                <section class="col-md-4 mb-3">
+                    <div class="text-center mb-3">
+                        <img src="logo_r.png" alt="Logo R" class="img-fluid" style="max-width:60px;">
+                    </div>
+                    <h2 class="text-center mb-3">O que é R?</h2>
+                    <p class="text-justify">
+                        R é uma linguagem de programação de alto nível, orientada a objetos, voltada para a
+                        manipulação e análise de dados, além da visualização gráfica. Seu ecossistema permite
+                        tanto a implementação de técnicas estatísticas próprias quanto o uso de métodos já
+                        disponíveis em diversos pacotes desenvolvidos pela comunidade.
+                    </p>
+                </section>
+
+                <!-- Coluna 2 -->
+                <section class="col-md-4 mb-4">
+                    <h2 class="text-center mb-3">Como obter o R?</h2>
+                    <p class="text-justify">Siga os passos abaixo para baixar e instalar o R e o RStudio:</p>
+                    <ol class="text-justify">
+                        <li>
+                            Baixe o R gratuitamente no site do 
+                            <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener noreferrer">
+                                CRAN
+                            </a>.
+                        </li>
+                        <li>
+                            Instale o R em seu computador seguindo as instruções do instalador.
+                        </li>
+                        <li>
+                            Baixe e instale o RStudio, um ambiente de desenvolvimento integrado (IDE) que facilita o uso do R, no site
+                            <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener noreferrer">
+                                Posit
+                            </a>.
+                        </li>
+                    </ol>
+                </section>
+            </div>
+
+            <!-- Quadro IDE RStudio -->
+            <section class="ide-rstudio mt-5">
+                <div class="ide-image">
+                    <img src="r_ambiente.png" alt="Logo RStudio" style="max-width:900px;">
+                </div>
+                <h3>IDE: RSTUDIO - sobre a IDE</h3>
+                <ol style="text-align: left; margin-left: 20px; padding-left: 20px;">
+                    <li>
+                        <strong>Editor de Script (canto superior esquerdo)</strong><br>
+                        Onde o código em R é escrito e salvo em arquivos <code>.R</code>. Permite organizar, comentar e executar trechos de código.
+                    </li>
+                    <li>
+                        <strong>Console (canto inferior esquerdo)</strong><br>
+                        Funciona como linha de comando do R. Mostra a saída dos comandos executados e também aceita comandos digitados diretamente.
+                    </li>
+                    <li>
+                        <strong>Environment / History (canto superior direito)</strong>
+                    
+                        <li><strong>Environment</strong>: lista os objetos criados (variáveis, vetores, matrizes, data frames, funções etc.).</li>
+                        <li><strong>History</strong>: guarda o histórico dos comandos já executados.</li>
+                        
+                    </li>
+                </ol>
+            </section>
+
+            <section class="ide-rstudio mt-5">
+                <h2>Mais sobre o RStudio</h2>
+                <ol style="text-align: left; margin-left: 20px; padding-left: 20px;">
+                    <li>
+                        <strong>Files</strong><br>
+                        mostra os arquivos da pasta de trabalho
+                    </li>
+                    <li>
+                        <strong>Plots</strong><br>
+                        Funciona como linha de comando do R. Mostra a saída dos comandos executados e também aceita comandos digitados diretamente.
+                    </li>
+                    <li>
+                        <strong>Packages</strong><br>
+                        gerencia pacotes instalados e carregados.
+                    </li>
+                    <li>
+                        <strong>Help</strong><br>
+                        fornece documentação e exemplos de funções/pacotes
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Seção de Referências -->
+            <section class="referencias mt-5" id="referencias">
+                <div class="text-center mb-4">
+                    <h3>Referências</h3>
+                </div>
+                <div class="container">
+                    <ul class="list-unstyled mx-auto" style="max-width: 800px; text-align: left;">
+                        <li>
+                            <a href="https://cran.r-project.org/mirrors.html" target="_blank" rel="noopener noreferrer">
+                                CRAN - Comprehensive R Archive Network
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://posit.co/download/rstudio-desktop/" target="_blank" rel="noopener noreferrer">
+                                Posit - RStudio Desktop
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="mt-5">
+        <div class="footer-content text-center py-4 d-flex flex-column align-items-center">
+            <div class="footer-logos mb-2">
+                <img src="logo_r1.png" alt="UFMT" class="logo-ufmt" width="60">
+            </div>
+            <div class="footer-text">
+                © 2025 - Introdução ao R | Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -45,26 +45,80 @@
                         <a class="nav-link active" href="index.html">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="r_course.html">Introdução ao R - Importação de dados e construção de
-                            tabelas</a>
+                        <a class="nav-link" href="r_course.html">Introdução ao R </a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
+    <main>
+        <section class="conteudo">
+            
+            <h2>Dataframes e Tabelas</h2>
 
-    <section class="conteudo">
-        <h1>Dataframe: Uma Tabela no ambiente do R</h1>
+            <h3>Definição de Dataframe</h3>
+            <div class="alerta-box alerta-atencao">
+                <p> Um dataframe é a principal estrutura de dados utilizada no R para operar e trabalhar com dados.
+                </p>
+                <p>Podemos entender uma dataframe como uma tabela instanciada no R.</p>
+            </div>
+            <h3>Definição de Tabela</h3>
+            <div class="alerta-box alerta-dica">
+                <p> Uma tabela, segundo o dicionário <a href="https://dicionario.priberam.org/tabela">Priberam de Língua Portuguesa </a>, define tabela como:
+                    <ol>
+                        <li> Suporte onde se faz um registro de informações, organizado em linhas e colunas.</li>
+                        <li> Registro de cálculos e resultados. </li>
+                        <li> Horário ou escala. </li>
+                        <li> Quadro em que se afixam anúncios, avisos, editais, etc.</li>
+                        <li> Suporte vertical retangular de cesto de basquetebol</li>
+                        <li> Jogadada em qua há uma troca rápida e curta de bola entre jogadores</li>
+                        <li> Cada uma das quatros peças ou lados que formam o caixilho das mesas de bilhar</li>
+                        <li> Quadro em que se marcam as carambolas feitas no jogo de bilhar</li> 
+                    </ol> 
+                </p>
+            </div>
+        </section>
+        <section class="conteudo">
+            <h1>Importação de Dados</h1>
+        <section class="conteudo">
+            <p>A biblioteca <i>readr</i> faz a importação de dados para o ambiente do R nos seguintes formatos com as respectivas funções:</p>
+            <ul>
+                <li><code>read_csv()</code> para arquivos CSV com separação por vírgula</li>
+                <li><code>read_csv2()</code> para arquivos CSV com separação por ponto e vírgula</li>
+                <li><code>read_tsv()</code> para arquivos com separação por tabulação, formato TSV</li>
+                <li><code>read_delim()</code> para arquivos delimitados por um caractere específico</li>
+                <li><code>read_fwf()</code> para arquivos em posição fixa</li>
+                <li><code>read_table()</code> para arquivos com separação por espaços</li>
+        </section>
+        <div class="alerta-box alerta-atencao">
+        o processo de importação de dados sempre vem acompanhado de alguns parâmetros, 
+        como o caminho do arquivo, o tipo de separação, a codificação, entre outros.
+        em todos eles temos o parâmetro <code>file</code>, que é o caminho do arquivo a ser importado, 
+        e o parâmetro <code>col_types</code>, que é utilizado para especificar os tipos de colunas do dataframe resultante. Parâmetros
+        adicionais podem ser utilizados para lidar com casos específicos, como arquivos com cabeçalho, arquivos sem separação clara, entre outros.
+        </div>
+        <p>Abaixo temos um exemplo de importação de dados com a função <code>read_csv()</code>, foi utilizada a <a href="https://sidra.ibge.gov.br">
+            Tabela 6975 do SIDRA-IBGE</a>  </p>
 
+                <pre><code>
+## Se for caso de não ter a biblioteca instalada, utilize o comando abaixo para instalar a biblioteca readr
+# install.packages("readr")
+library(readr)
+tabela6975 <- readr::read_csv(
+  file = "C:/Users/orafa/OneDrive/Documents/Monitoria/tabela6975.csv",
+  skip = 4,
+  n_max = 408,
+  col_names = c("UF","Origem dos rendimentos","Classes de rendimento total e variação patrimonial mensal familiar",
+                "Situação do domicílio","ANO")
+)
 
-
-    </section>
-
-
+            </code></pre>
+    <p>O código acima importa os dados da Tabela 6975 do SIDRA-IBGE para um dataframe no R.O parâmetro <code>file</code> especifica o caminho do arquivo 
+        a ser importado, e o parâmetro <code>col_names</code> define os nomes das colunas do dataframe resultante. Skip e n_max são parâmetros que controlam 
+        o número de linhas a serem ignoradas e o número máximo de linhas a serem lidas, respectivamente. Uma vez que nem todas linhas de uma tabela são
+    de interesse no processo de importação</p>
     </main>
-
 
     <!-- Footer -->
     <footer id="contato" class="mt-5">
